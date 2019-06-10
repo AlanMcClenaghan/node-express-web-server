@@ -3,19 +3,22 @@ const express = require("express");
 const app = express();
 
 app.get("", (req, res) => {
-  res.send("Hello express");
+  res.send("<h1>Weather App</h1>");
 });
 
 app.get("/help", (req, res) => {
-  res.send("Help page");
+  res.send("<h1>Help</h1>");
 });
 
 app.get("/about", (req, res) => {
-  res.send("About page");
+  res.send("<h1>About</h1>");
 });
 
 app.get("/weather", (req, res) => {
-  res.send("Here is the weather...");
+  res.send({
+    forecast: "Rainy",
+    location: ["51.5074", "-0.1278"]
+  });
 });
 
 app.listen(3000, () => {
