@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
           body.currently.temperature
         } celcius out. There is a ${
           body.currently.precipProbability
-        }% chance of rain.`
+        }% chance of rain. ${body.minutely.summary}`
       );
     }
   });
